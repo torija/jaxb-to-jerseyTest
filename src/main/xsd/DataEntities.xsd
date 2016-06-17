@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="ttech-14062016"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="ttech-14062016"
+	elementFormDefault="qualified" version="2016.1">
+	<xs:element name="DataEntities" type="DataEntities" />
+	<xs:complexType name="DataEntities">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="entities" type="DataEntity" minOccurs="1"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="DataEntity">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:string" />
+		<xs:attribute name="name" type="xs:string" />
+		<xs:attribute name="description" type="xs:string" />
+		<xs:attribute name="quantity" type="xs:int" />
+	</xs:complexType>
+	
+	<xs:complexType name="Status">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="success" type="xs:boolean" />
+	</xs:complexType>
+</xs:schema>
